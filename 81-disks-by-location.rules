@@ -1,0 +1,2 @@
+KERNEL=="sd[a-z]*", ENV{SUBSYSTEM}=="block", ENV{DEVPATH}=="/devices/pci?*", IMPORT{program}="/opt/udev-disk-locations/disk-locations.sh" SYMLINK+="%c{1+}"
+
