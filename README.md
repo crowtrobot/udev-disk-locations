@@ -1,5 +1,5 @@
 # udev-disk-locations
-Scripts to extend udev to automate tagging disks with physical location data.  
+Scripts to extend udev to automate tagging disks with physical location data.  Creates additional links for drives, for example "/dev/disk/by-location/front-bay1" or "/dev/disk/by-location/top-left" as links to the device like /dev/sda.  
 
 
 # Why?
