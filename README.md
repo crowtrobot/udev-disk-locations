@@ -24,13 +24,14 @@ disk-location.sh will find out what driver is used for the drive interface.  Thi
 ## AHCI ini config format
 Technically this could all be easily achieved normal udev rules, but since this script existed anyway for the other drives, why not use it for these too?  
 For AHCI, the names are simply specified like:
-ata5=back-left
-ata6=back-right
+ata5=back-right
+ata6=back-left
 
 One drive can have more than one name, each will become a link in /dev/disk/by-location:
-ata5=back-left
-ata5=near_the_power_supply
-ata6=near_the_usb
+ata5=near_the_usb
+ata6=back-left
+ata6=near_the_power_supply
+
 
 # megaraid_sas ini config format
 For the megaraid_sas, the names are more complicated.  First you need to name the enclosure.  This is identified as a combination of the PCI address for the raid card (because you might have more than one raid card) and the enclosure number.  For example, with raid card at pci-0000:01:00.0, and enclosures 4 and 5:
